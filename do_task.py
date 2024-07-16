@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 def perform_action(args, input_data):
 
-    return "Some results based on args and input_data."
+    return f"Some results based on args:\n{args}\n and input_data:\n{input_data}\n"
 
 def report_results(args, input_data, results):
 

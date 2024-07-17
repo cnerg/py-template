@@ -20,3 +20,23 @@ class Piano:
 
     def drop(self):
         pass
+
+    @property
+    def weight(self):
+        """
+        The current weight of the piano.
+
+        :returns: the current weight.
+        :rtype: float
+        """
+        return self._weight
+
+    @property
+    def height(self):
+        """
+        The current height of the piano.
+
+        :returns: the current height.
+        :rtype: float
+        """
+        return self._height

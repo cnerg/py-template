@@ -10,11 +10,11 @@ def blank_piano():
 
 def test_piano_init(blank_piano):
     assert blank_piano.weight == pytest.approx(1_000.0)
-    assert blank_paino.height == pytest.approx(0.0)
+    assert blank_piano.height == pytest.approx(0.0)
 
 
 def test_lifting_piano(blank_piano):
-    piano.lift()
+    blank_piano.lift()
     assert blank_piano.height == pytest.approx(3)
 
 

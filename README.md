@@ -4,20 +4,20 @@ This repository serves as a template for new python projects and a way to expres
 ## Best Practices
 
 ### User input
-* Always use `argparse` for command-line arguments
-* Assume the use of `yaml` for structured input files unless there are compelling reasons for something else
+* Always use [`argparse`](https://docs.python.org/3/library/argparse.html) for command-line arguments
+* Assume the use of [`yaml`](https://python.land/data-processing/python-yaml) for structured input files unless there are compelling reasons for something else
 
 ### User output
 * Always use `logger` for status output
 * Carefully choose an output format for standard formats, considering the following in order of priority:
-    * CSV
-    * yaml
-    * json
-    * HDF5
-    * SQL
+    * [CSV](https://docs.python.org/3/library/csv.html) with direct support in NumPy, Pandas, etc
+    * [yaml](https://python.land/data-processing/python-yaml)
+    * [json](https://docs.python.org/3/library/json.html)
+    * [HDF5](https://www.h5py.org/)
+    * SQL, for example [SQLite](https://docs.python.org/3/library/sqlite3.html)
 
 ### Modularity
-* All runnable scripts should include a block like:
+* All runnable scripts [should include a block like](https://stackoverflow.com/questions/419163/what-does-if-name-main-do):
 
 ``` python
 if __name__ == __main__():
@@ -25,7 +25,7 @@ if __name__ == __main__():
 ```
 
 ### Testing
-* Always use `pytest` for testing
+* Always use [`pytest`](https://docs.pytest.org/en/8.2.x/) for testing
 * Introduce a simple continuous integration (CI) action ASAP
 
 ### Collaboration

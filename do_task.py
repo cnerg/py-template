@@ -24,7 +24,7 @@ def task_args():
     parser.add_argument('filename',
                         help="A filename to read for input")
     parser.add_argument("--verbose", "-v",
-                        type=int,
+                        type=int, default=0,
                         help="Level of verbosity for logging")
 
     return parser.parse_args()
@@ -39,6 +39,9 @@ def read_input(input_filename):
 def do_task():
 
     args = task_args()
+    
+    logging.basicConfig(level=(logging.WARN-args.verbose))
+
     input_data = read_input(args.filename)
 
     results = perform_action(args, input_data)

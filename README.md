@@ -1,7 +1,7 @@
 # py-template
 This repository serves as a template for new python projects and a way to express best practices
 
-## Best Practices
+## Best Practices - Coding Practices
 
 ### User input
 * Always use [`argparse`](https://docs.python.org/3/library/argparse.html) for command-line arguments
@@ -34,3 +34,26 @@ if __name__ == __main__():
 
 ### Packaging and installation
 * Introduce a `pyproject.toml` file ASAP
+
+## Best Practices - Style
+
+### Code formatting
+* Follow PEP8 style guide, ideally with a tools like
+  [`black`](https://pypi.org/project/black/) to help enforce it, especially via
+  a plugin to your editor
+
+### Variable naming
+* Generally, choose nouns for variables and verbs for methods
+* Clear variable and method names can reduce the need for comments
+
+### Comments
+* Include a docstring in every method
+* Rely on clear variable and method names and add comments sparingly where the
+  intent/approach is non-intuitive
+
+### Modularity
+* If you have cut & paste code in two different places, it probably should be a
+  method
+* Even very short methods can be valuable if the method name makes the code more
+  readable
+* Ideally, methods should be no longer than one screen worth of lines

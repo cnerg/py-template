@@ -31,6 +31,8 @@ if __name__ == __main__():
 ### Collaboration
 * Generate pull requests (PRs) with as little code change as possible
 * Include tests in all PRs
+* Do not merge your own PR; there should always be at least one review by a
+  non-author, and a non-author should merge
 
 ### Packaging and installation
 * Introduce a `pyproject.toml` file ASAP

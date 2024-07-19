@@ -1,8 +1,8 @@
 import do_task
 
 def test_perform_action():
-    args = foo
-    input_data = bar
+    args = 'foo'
+    input_data = 'bar'
 
     exp = f"Some results based on args:\n{args}\n and input_data:\n{input_data}\n"
 

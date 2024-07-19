@@ -20,7 +20,7 @@ This repository serves as a template for new python projects and a way to expres
 * All runnable scripts [should include a block like](https://stackoverflow.com/questions/419163/what-does-if-name-main-do):
 
 ``` python
-if __name__ == __main__():
+if __name__ == "__main__":
     do_main_task()
 ```
 

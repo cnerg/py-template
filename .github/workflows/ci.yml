@@ -1,0 +1,31 @@
+name: Sample CI
+
+on:
+    push:
+    workflow_dispatch:
+
+jobs:
+    main:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Apt dependencies
+              shell: bash
+              run: |
+                sudo apt -y update
+                sudo apt install -y python3-dev
+
+            - name: Python dependencies
+              shell: bash
+              run: |
+                pip3 install numpy \
+                            pytest
+
+            - name: Test
+              shell: bash
+              run: |
+                pytest -v .
+       

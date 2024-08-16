@@ -36,6 +36,7 @@ jobs:
             - name: install
               shell: bash
               run: |
+                python -m build .
                 pip install build/*.whl
                 do_thing -h
 

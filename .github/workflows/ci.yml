@@ -34,6 +34,7 @@ jobs:
               run: python -m build .
 
             - name: install
+              shell: bash
               run: |
                 pip install .
                 do_thing -h

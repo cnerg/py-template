@@ -22,10 +22,21 @@ jobs:
               shell: bash
               run: |
                 pip3 install numpy \
-                            pytest
+                            pytest \
+                            build
 
             - name: Test
               shell: bash
               run: |
                 pytest -v .
+
+            - name: build
+              run: python -m build .
+
+            - name: install
+              run: |
+                pip install .
+                do_thing -h
+
+
        

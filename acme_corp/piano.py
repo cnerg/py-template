@@ -7,7 +7,7 @@ class Piano:
 
     .. warning::
         Always use proper rigging techniques when hoisting this above
-        above any paths that may be occupied any Road Runners.
+        above any paths that may be occupied by any Road Runners.
     """
 
     def __init__(self):

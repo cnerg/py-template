@@ -3,7 +3,7 @@ from . import Piano
 """
 This is a special file that makes this package executable.
 
-It will only be ran when this package is ran from the command line, i.e.,
+It will only be run when this package is run from the command line, i.e.,
 
 ``python -m acme_corp``
 """

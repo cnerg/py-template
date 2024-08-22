@@ -4,6 +4,7 @@ import yaml
 
 logger = logging.getLogger(__name__)
 
+# using Sphinx docstrings style: <https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html>
 
 def perform_action(args, input_data):
     """Perform some action
@@ -11,15 +12,12 @@ def perform_action(args, input_data):
     Following the principle of separation of concerns, this method only
     performs the action, but does not have any input or output.
 
-    inputs
-    ------
-    args : argparse object with many possible members based on argparse configuration
-    input_data : dictionary of input data read from YAML file
-
-    outputs
-    --------
-    string that describes the input quantities
-
+    :param args: argparse object with many possible members based on argparse configuration
+    :type args: argparse.ArgumentParser
+    :param input_data: dictionary of input data read from YAML file
+    :type input_data: dict
+    :returns: string that describes the input quantities
+    :rtype: str
     """
 
     return f"Some results based on args:\n{args}\n and input_data:\n{input_data}\n"
@@ -31,16 +29,12 @@ def report_results(args, input_data, results):
     Following the principle of separation of concerns, this method only
     performs output and does not do any actions.
 
-    inputs
-    ------
-    args : argparse object with many possible members based on argparse configuration
-    input_data : dictionary of input data read from YAML file
-    results : the results of the action
+    :param args: argparse object with many possible members based on argparse configuration
+    :type args: argparse.ArgumentParser
+    :param input_data: dictionary of input data read from YAML file
+    :type input_data: dict
 
-    outputs
-    --------
-    None
-
+    :returns: None
     """
 
     logger.info(
@@ -56,13 +50,8 @@ def task_args():
     `filename` : required positional argument
     `verbose` : optional keyword argument
 
-    inputs
-    -------
-    None
-
-    outputs
-    --------
-    argparse object with various members depending on configuration
+    :returns: argparse object with various members depending on configuration
+    :rtype: argparse.ArgumentParser
     """
 
     parser = argparse.ArgumentParser(
@@ -86,7 +75,10 @@ def read_input(input_filename):
 
     inputs
     -------
-    input_filename : a string with a filename/path accessible from the current location
+    :param input_filename: a string with a filename/path accessible from the current location
+    :type input_filename: str
+    :returns: the data from the YAML file.
+    :rtype: dict
     """
 
     with open(input_filename, "r") as yaml_file:

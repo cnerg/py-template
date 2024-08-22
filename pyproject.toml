@@ -1,0 +1,35 @@
+# reference: <https://packaging.python.org/en/latest/guides/writing-pyproject-toml/>
+[project]
+name = "acme_corp"
+description = "A package, or box, created by the Acme Corporation for all of your Road Runner hunting needs."
+# use semantic versioning: <https://semver.org/>
+version = "0.0.1"
+
+readme = "README.md"
+requires-python = ">=3.9"
+maintainers = [{name = "G. C. Runner", email = "runner@californian.us"}]
+authors = [{name = "G. C. Runner", email = "runner@californian.us"}]
+
+keywords = ["Piano", "Anvil", "Instant Tunnel"]
+
+# these will be install with `pip install .`
+dependencies = ["pyyaml"]
+
+# these will only be installed with `pip install .[test]`
+[project.optional-dependencies]
+test =["pytest"]
+
+[project.scripts]
+do_thing = "acme_corp:do_task.do_task"
+
+# these show up on the left bar on pypi.org
+[project.urls]
+Homepage = "https://github.com/cnerg/py-template"
+
+[build-system]
+requires = ["setuptools>=64.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tools.pytest.ini_options]
+minversion = "6.0"
+junit_logging = "all"

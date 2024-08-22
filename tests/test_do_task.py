@@ -1,4 +1,4 @@
-import do_task
+import acme_corp.do_task as do_task
 
 def test_perform_action():
     args = 'foo'

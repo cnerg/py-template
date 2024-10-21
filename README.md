@@ -85,3 +85,6 @@ if __name__ == "__main__":
     * avoid any combination of reading, using and writing data in the same
       method
 
+## Checklist 
+
+* [ ] do something

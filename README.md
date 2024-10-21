@@ -47,6 +47,12 @@ if __name__ == "__main__":
 ### Variable naming
 * Generally, choose nouns for variables and verbs for methods
 * Clear variable and method names can reduce the need for comments
+* Avoid **Magic Numbers** - numerical constants without a clear purpose
+    * provide numerical constants with a variable to describe their purpose
+    * these can be physical constants (`avogadro = 6.02e23`), unit conversions
+      (`ev2Mev = 1e-6`), or vector indices (`z = 2`), among others
+    * they are not generally needed for things like squaring a quantity or
+      dividing by some integer that arises from algebra
 
 ### Comments
 * Include a docstring in every method

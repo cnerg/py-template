@@ -46,14 +46,16 @@ if __name__ == "__main__":
 
 ### Variable naming
 * Generally, choose nouns for variables and verbs for methods
+* The most common approach to multi-word variables is "snake case": variables
+  are in lower case with words separated by underscore
 * Clear variable and method names can reduce the need for comments
 * Carefully determine whether temporary variables are helpful. If you only use
   it once, consider if that line of code can be combined with the place it is
   used.
 * Avoid **Magic Numbers** - numerical constants without a clear purpose
     * provide numerical constants with a variable to describe their purpose
-    * these can be physical constants (`avogadro = 6.02e23`), unit conversions
-      (`ev2Mev = 1e-6`), or vector indices (`z = 2`), among others
+    * these can be physical constants (`AVOGADRO = 6.02e23`), unit conversions
+      (`EV2MEV = 1e-6`), or vector indices (`z = 2`), among others
     * they are not generally needed for things like squaring a quantity or
       dividing by some integer that arises from algebra
 
@@ -65,6 +67,11 @@ if __name__ == "__main__":
   data
 * when looping over iterables (e.g. lists, dictionaries, numpy arrays, etc), 
   avoid an indexing variable if possible
+    * `zip()` may be useful for iterating through multiple iterables with parallel
+      indexing
+    * `enumerate()` allows you to autogenerate an indexing variable, but make sure you need that index
+    * iterating over a `range()` is probably a last resort, try iterating directly over
+      the iterable or using `zip`
 * consider [list
   comprehensions](https://www.w3schools.com/python/python_lists_comprehension.asp)
   for simple operations
@@ -76,7 +83,7 @@ if __name__ == "__main__":
 
 ### Modularity
 * If you have cut & paste code in two different places, it probably should be a
-  method (or maybe a loop)
+  method/function (or in some cases a loop)
 * Even very short methods can be valuable if the method name makes the code more
   readable
 * Ideally, methods should be no longer than one screen worth of lines

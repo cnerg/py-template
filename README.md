@@ -87,4 +87,13 @@ if __name__ == "__main__":
 
 ## Checklist 
 
-* [ ] do something
+Before submitting a PR, ask yourself: "Have I...."
+* [ ] modularized my code into methods that each have a clear and
+  singular purpose
+* [ ] included a docstring for every method
+* [ ] replaced all magic numbers with variables
+* [ ] used method names (verbs) and variable names (nouns) that make the
+  code clearly readable
+* [ ] removed instances of copy/paste code or nearly identical sections of code
+* [ ] made good data structure design choices
+ 

@@ -1,6 +1,24 @@
 # py-template
 This repository serves as a template for new python projects and a way to express best practices
 
+## General Thoughts on Design
+
+* Designs are often very fluid while exploring a new problem. Expect to throw
+  away many parts of a first version to focus on the things that matter.
+* After becoming familiar with the project, spend some time in pseudo-code to
+  focus on identifying the basic building blocks and call graph
+   a. Start implementing with the most deeply nested methods with accompanying
+   tests
+   b. Expand to the methods that call those methods
+   c. End with user interface
+* With the building blocks identified in pseudo-code, carefully consider the
+  data access patterns to inform the data design
+* Choose a data design that is suitable for your most deeply nested methods and
+  modify it sparingly and only with good cause as you add layers 
+* Object-oriented design often seems like overkill for new small projects but
+   a. Can avoid the need to pass around lots of data objects
+   b. Can be a framework for helping to formalize the design process
+
 ## Best Practices - Coding Practices
 
 ### User input

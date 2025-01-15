@@ -75,6 +75,8 @@ if __name__ == "__main__":
 * consider [list
   comprehensions](https://www.w3schools.com/python/python_lists_comprehension.asp)
   for simple operations
+* when using a loop variable, consider the same general guidance on variable naming; 
+  avoid overly simple loop variables, e.g. `(i,j,k)`, that have no semantic meaning
 
 ### Comments
 * Include a docstring in every method

@@ -7,9 +7,9 @@ This repository serves as a template for new python projects and a way to expres
   away many parts of a first version to focus on the things that matter.
 * After becoming familiar with the project, spend some time in pseudo-code to
   focus on identifying the basic building blocks and call graph
-  a. Start implementing with the most deeply nested methods with accompanying tests
-  b. Expand to the methods that call those methods
-  c. End with user interface
+  1. Start implementing with the most deeply nested methods with accompanying tests
+  2. Expand to the methods that call those methods
+  3. End with user interface
 
 * With the building blocks identified in pseudo-code, carefully consider the
   data access patterns to inform the data design

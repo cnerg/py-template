@@ -7,6 +7,7 @@ This repository serves as a template for new python projects and a way to expres
   away many parts of a first version to focus on the things that matter.
 * After becoming familiar with the project, spend some time in pseudo-code to
   focus on identifying the basic building blocks and call graph
+
    a. Start implementing with the most deeply nested methods with accompanying
    tests
    b. Expand to the methods that call those methods

@@ -12,12 +12,18 @@ def perform_action(args, input_data):
     Following the principle of separation of concerns, this method only
     performs the action, but does not have any input or output.
 
-    :param args: argparse object with many possible members based on argparse configuration
-    :type args: argparse.ArgumentParser
-    :param input_data: dictionary of input data read from YAML file
-    :type input_data: dict
-    :returns: string that describes the input quantities
-    :rtype: str
+    Parameters
+    ----------
+    args : argparse.ArgumentParser
+        argparse object with many possible members based on argparse
+        configuration
+    input_data : dict
+        dictionary of input data read from YAML file
+
+    Returns
+    -------
+    str
+        string that describes the input quantities
     """
 
     return f"Some results based on args:\n{args}\n and input_data:\n{input_data}\n"
@@ -29,12 +35,18 @@ def report_results(args, input_data, results):
     Following the principle of separation of concerns, this method only
     performs output and does not do any actions.
 
-    :param args: argparse object with many possible members based on argparse configuration
-    :type args: argparse.ArgumentParser
-    :param input_data: dictionary of input data read from YAML file
-    :type input_data: dict
+    Parameters
+    ----------
+    args : argparse.ArgumentParser
+        argparse object with many possible members based on argparse
+        configuration
+    input_data : dict
+        dictionary of input data read from YAML file
 
-    :returns: None
+    Returns
+    -------
+    unknown
+        None
     """
 
     logger.info(
@@ -50,8 +62,10 @@ def task_args():
     `filename` : required positional argument
     `verbose` : optional keyword argument
 
-    :returns: argparse object with various members depending on configuration
-    :rtype: argparse.ArgumentParser
+    Returns
+    -------
+    argparse.ArgumentParser
+        argparse object with various members depending on configuration
     """
 
     parser = argparse.ArgumentParser(
@@ -75,10 +89,17 @@ def read_input(input_filename):
 
     inputs
     -------
-    :param input_filename: a string with a filename/path accessible from the current location
-    :type input_filename: str
-    :returns: the data from the YAML file.
-    :rtype: dict
+
+    Parameters
+    ----------
+    input_filename : str
+        a string with a filename/path accessible from the current
+        location
+
+    Returns
+    -------
+    dict
+        the data from the YAML file.
     """
 
     with open(input_filename, "r") as yaml_file:

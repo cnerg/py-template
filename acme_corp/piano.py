@@ -1,13 +1,13 @@
 class Piano:
-    """
-    A grand piano proudly built by ACME corporation.
+    """A grand piano proudly built by ACME corporation.
 
     Weighing half a ton be careful when hoisting this precariously over
     sidewalks.
 
-    .. warning::
-        Always use proper rigging techniques when hoisting this above
-        above any paths that may be occupied by any Road Runners.
+    Warnings
+    --------
+    Always use proper rigging techniques when hoisting this above
+    above any paths that may be occupied any Road Runners.
     """
 
     def __init__(self):
@@ -23,20 +23,22 @@ class Piano:
 
     @property
     def weight(self):
-        """
-        The current weight of the piano.
+        """The current weight of the piano.
 
-        :returns: the current weight.
-        :rtype: float
+        Returns
+        -------
+        float
+            the current weight.
         """
         return self._weight
 
     @property
     def height(self):
-        """
-        The current height of the piano.
+        """The current height of the piano.
 
-        :returns: the current height.
-        :rtype: float
+        Returns
+        -------
+        float
+            the current height.
         """
         return self._height

@@ -4,7 +4,7 @@ import yaml
 
 logger = logging.getLogger(__name__)
 
-# using Sphinx docstrings style: <https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html>
+# using numpy style docstrings style: <https://numpydoc.readthedocs.io/en/stable/format.html>
 
 def perform_action(args, input_data):
     """Perform some action
